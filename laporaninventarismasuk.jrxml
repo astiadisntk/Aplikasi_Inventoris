@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.9487171000000014"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="laporanmasuk" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from invetaris_masuk where id_user]]>
+	</queryString>
+	<field name="id_user" class="java.lang.String"/>
+	<field name="id_inventaris_masuk" class="java.lang.String"/>
+	<field name="kode_barang" class="java.lang.String"/>
+	<field name="nama_barang" class="java.lang.String"/>
+	<field name="jenis" class="java.lang.String"/>
+	<field name="kode_lokasi" class="java.lang.String"/>
+	<field name="jumlah" class="java.lang.String"/>
+	<field name="nilai" class="java.lang.String"/>
+	<field name="nama_user" class="java.lang.String"/>
+	<field name="tanggal_masuk" class="java.lang.String"/>
+	<variable name="id_inventaris_masuk_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{id_inventaris_masuk}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="26" y="17" width="498" height="48"/>
+				<textElement textAlignment="Center">
+					<font size="30" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[LAPORAN INVENTARIS MASUK]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="16" y="0" width="484" height="61"/>
+			</rectangle>
+			<textField>
+				<reportElement x="126" y="2" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{id_user}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="22" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{id_inventaris_masuk}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama User :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_user}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="20" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tanggal User :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="20" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tanggal_masuk}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="22" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Id Inventaris Masuk :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Id User :]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="187" splitType="Stretch">
+			<rectangle>
+				<reportElement x="16" y="0" width="484" height="187"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="26" y="32" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Barang :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="157" y="32" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="157" y="63" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{jenis}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="63" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jenis :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="157" y="93" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kode_lokasi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="157" y="125" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{jumlah}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="93" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kode Lokasi :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="125" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jumlah :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="157" y="2" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kode_barang}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kode Barang :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="157" y="157" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nilai}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="157" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nilai :]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
