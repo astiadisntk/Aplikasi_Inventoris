@@ -7,16 +7,16 @@ Software yang digunakan :
 2. XAMPP
 3. MySQL
 
-Fitur Aplikasi :
 
+Fitur Aplikasi :
 1. Menu Login
 2. Input data Data Barang, Pegawai, Lokasi, Inventaris Masuk, dan Inventaris Keluar.
 3. Edit data Data Barang, Pegawai, Lokasi, Inventaris Masuk, dan Inventaris Keluar.
 4. Hapus Data Data Barang, Pegawai, Lokasi, Inventaris Masuk, dan Inventaris Keluar.
 5. Cetak Data Inventaris Masuk, dan Inventaris Keluar.
 
-Fitur Yang Telah Selesai :
 
+Fitur Yang Telah Selesai :
 1. Menu Login
 2. Input data barang
 3. Input data Pegawai
